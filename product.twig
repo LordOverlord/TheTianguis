@@ -125,7 +125,6 @@
             {% if manufacturer %}
             <li>{{ text_manufacturer }} <a href="{{ manufacturers }}">{{ manufacturer }}</a></li>
             {% endif %}
-            <li>{{ text_model }} {{ model }}</li>
             {% if reward %}
             <li>{{ text_reward }} {{ reward }}</li>
             {% endif %}
@@ -143,9 +142,7 @@
               <h2>{{ special }}</h2>
             </li>
             {% endif %}
-            {% if tax %}
-            <li>{{ text_tax }} {{ tax }}</li>
-            {% endif %}
+            <li><span>Mas gastos de envio.</span></li>
             {% if points %}
             <li>{{ text_points }} {{ points }}</li>
             {% endif %}
