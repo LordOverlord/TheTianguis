@@ -1,0 +1,52 @@
+<footer>
+  <div class="container" style="font-weight:normal">
+    <div class="row">
+      {% if informations %}
+      <div class="col-sm-3">
+        <h5>{{ text_information }}</h5>
+        <ul class="list-unstyled">
+         {% for information in informations %}
+          <li><a href="{{ information.href }}">{{ information.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+      <div class="col-sm-3">
+          <h5>Redes Sociales</h5>
+        <ul class="list-unstyled">
+          <li><i class="fa fa-facebook-square"></i><a href="https://www.facebook.com/thetianquiztli" target="_blank"> Facebook</a></li>
+          <li><i class="fa fa-twitter-square"></i><a href="https://twitter.com/TheTianguis" target="_blank"> Twitter</a></li>
+          <li><i class="fa fa-instagram"></i><a href="https://www.instagram.com/the.tianguis/" target="_blank"> Instragram</a></li>
+          <li><i class="fa fa-youtube"></i><a href="https://www.youtube.com/channel/UCs7bOXuxkWZ-1SIKzRm6FDA" target="_blank"> YouTube</a></li>
+          <li><i class="fa fa-whatsapp"></i> (55) 7500 6474</li>
+        </ul>
+      </div>
+      <div class="col-sm-3">
+        <h5>Contacto</h5>
+        <ul class="list-unstyled">
+          <li><i class="fa fa-envelope"></i><a href="{{ contact }}"> Contacto</a></li>
+          <li><i class="fa fa-question"></i><a href="{{ contact }}"> ¿Quieres anunciarte con nosotros?</a></li>
+          <li><i class="fa fa-question"></i><a href="{{ contact }}"> ¿Quieres comprar por mayoreo?</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-3">
+        <h5>Certificados</h5>
+        <ul class="list-unstyled">
+          <li><a href="{{ account }}">{{ text_account }}</a></li>
+          <li><a href="{{ order }}">{{ text_order }}</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+<div class="copyright">
+	<div class="container" style="font-weight:normal">
+		<div class="row">
+			<p>{{ powered }} - Designed by <a href="https://www.overlordco.webcindario.com">OverlordCo</a></p>
+    	</div>
+    </div>
+</div>
+{% for script in scripts %}
+<script src="{{ script }}" type="text/javascript"></script>
+{% endfor %}
+</body></html>
